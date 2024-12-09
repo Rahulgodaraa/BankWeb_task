@@ -1,0 +1,996 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: white;
+}
+header {
+  background-color: #96144a;
+  color: #fff;
+  padding: 1rem 8rem;
+}
+
+header nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  margin-right: 2rem;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.get-your-card-header {
+  /* background-color: #fff; */
+  color: #666;
+  padding: 2rem 8rem;
+}
+
+.get-your-card-header .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.get-your-card-header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.toggle-button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.toggle-label {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+}
+
+.toggle-checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 24px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.toggle-checkbox:checked + .toggle-slider {
+  background-color: #96144a;
+}
+
+.toggle-checkbox:checked + .toggle-slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+
+ 
+
+.get-card-digital {
+  background-color: white; /* Light gray background for the section */
+  color: #333;
+  padding: 2rem 8rem;
+  align-items: stretch;
+}
+
+ 
+.get-card-digital {
+  display: flex;
+ 
+  color: #333;
+  padding: 2rem 8rem;
+  align-items: stretch; /* Ensures both boxes stretch to the same height */
+}
+.get-card-digital .content {
+  flex: 1;
+  background: linear-gradient(to right, #b9185b, #8a1043);
+  border-radius: 8px 0 0 8px;
+  padding: 2rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.get-card-digital h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.get-card-digital p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.get-card-digital ol {
+  list-style: none; /* Remove default numbering */
+  padding: 0;
+  counter-reset: step-counter; /* Reset counter for custom numbers */
+  width: 100%;
+}
+.get-card-digital ol li {
+  position: relative;
+  padding-left: 35px; /* Add padding to ensure the number and dashed line have space */
+}
+
+.get-card-digital ol li .number {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px; /* Adjust width for the circle */
+  height: 30px; /* Adjust height for the circle */
+  background-color: #F1F1F1; /* Circle background color */
+  color: #0e0303; /* Text color inside the circle */
+  border-radius: 50%; /* Make it circular */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center the number inside the circle */
+  font-weight: bold;
+  font-size: 1.2rem; /* Adjust number size */
+}
+
+.get-card-digital ol li p {
+  margin-left: 20px; /* Adjust space between the number and the text */
+}
+
+.get-card-digital ol li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 0.75rem; /* Align with circle */
+  top: 2rem; /* Adjust top so the dashed line starts right below the number */
+  width: 2px;
+  height: 100%;
+  border-left: 2px dashed #fff; /* Dotted line */
+}
+
+.get-card-digital ol li span {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.get-card-digital .video {
+  flex: 1;
+  text-align: center;
+  background-color: #333; /* Matching background with slight contrast */
+  border-radius: 0 8px 8px 0; /* Rounded corners on the right */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.get-card-digital .video iframe {
+  max-width: 100%;
+  border-radius: 0 8px 8px 0; /* Match the corner radius */
+}
+/* Everything Digital Now */
+.everything-digital {
+  display: flex;
+  background-color: #f1f5f8;
+  padding: 2rem 8rem;
+  margin: 0 8rem;
+  border-radius: 8px;
+}
+
+.everything-digital .image {
+  flex: 1;
+  text-align: center;
+}
+
+.everything-digital .content {
+  flex: 1;
+  padding-left: 2rem;
+}
+
+.everything-digital h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.everything-digital .feature-list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.everything-digital .feature-item {
+  display: flex;
+  align-items: center;
+}
+
+.everything-digital .icon-container {
+  color: #fff;
+  background-color: #96144a;
+  border-radius: 20%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1.5rem;
+}
+
+.everything-digital .feature-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.everything-digital .feature-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.everything-digital .feature-label {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.everything-digital .content h3 {
+  margin: 2rem 0rem;
+}
+
+.everything-digital .video-kyc-process {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.everything-digital .video-kyc-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 0 2rem;
+}
+
+
+.everything-digital .step-number {
+  background-color: #96144a;
+  color: #fff;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+}
+
+.everything-digital .video-kyc-step .step-number {
+  background-color: #fff;
+  color: #666;
+  border: #96144a 1px solid;
+}
+
+
+.everything-digital .video-kyc-step:first-child .step-number {
+  background-color: #96144a;
+  color: #fff;
+}
+
+.everything-digital .video-kyc-process::before {
+  content: '';
+  position: absolute;
+  left: 50px;
+  top: 29%;
+  transform: translateY(-50%);
+  width: 80%;
+  height: 2px;
+  background-color: #ddd;
+}
+
+.everything-digital .video-kyc-step p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.everything-digital .btn {
+  display: inline-block;
+  background-color: #96144a;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+/* Credit Card Services */
+
+.credit-card-services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  background-color: #f1f5f8;
+  padding: 2rem 8rem;
+  margin-top: 2rem;
+}
+
+.credit-card-services .service-card {
+   /* Default for larger screens */
+  padding: 1rem;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.hidden-card {
+  display: none;
+}
+
+/* View More button container */
+.view-more-container {
+  width: 100%;
+  text-align: center;
+}
+
+.view-more-btn {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.view-more-btn:hover {
+  background-color: #96144a;
+}
+
+.credit-card-services .service-card .material-symbols-outlined {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background-color: #96144a; /* Background color for icons */
+  color: #fff; /* Icon color to contrast with the background */
+  padding: 0.5rem; /* Adds spacing inside the icon background */
+  border-radius: 9px; /* Rounded corners for the icon background */
+  display: inline-block; /* Ensures the background is applied only around the icon */
+}
+
+.credit-card-services .service-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.credit-card-services .service-card p {
+  font-size: 1rem;
+}
+
+/* Cards for You Section */
+.cards-for-you {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #96144a;
+  color: #fff;
+  padding: 1rem 8rem;
+  margin: 2rem 8rem;
+  border-radius: 8px;
+}
+
+.cards-for-you .content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.cards-for-you .content p {
+  font-size: 1rem;
+}
+
+.cards-for-you .explore-btn {
+  background-color: #fff;
+  color: #96144a;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cards-for-you .explore-btn:hover {
+  background-color: #f9f9f9;
+}
+
+
+/* Mastering Credit Cards Section */
+.mastering-credit-cards {
+  display: flex;
+  background-color: #f1f5f8;
+  color: #333;
+  border-radius: 8px;
+  padding: 2rem 8rem;
+  margin: 2rem 8rem;
+}
+
+.mastering-credit-cards .image {
+  flex: 1;
+  text-align: center;
+}
+
+.mastering-credit-cards .image img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.mastering-credit-cards .content {
+  flex: 1;
+  padding-left: 2rem;
+}
+
+.mastering-credit-cards h2 {
+  font-size: 2rem;
+  margin-bottom: 0rem;
+  font-weight: 700;
+}
+
+
+.mastering-credit-cards p {
+  font-size: 14px;
+  margin-bottom: 2rem;
+  color: #777;
+}
+
+.mastering-credit-cards .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.mastering-credit-cards .flex {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #555;
+}
+
+.mastering-credit-cards .flex > div:first-child {
+  background-color: #96144a;
+  border-radius: 8px;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.mastering-credit-cards .flex > div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.mastering-credit-cards .flex p {
+  margin-top: 0.25rem;
+  color: #777;
+  font-weight: 300;
+  
+}
+
+.mastering-credit-cards .material-symbols-outlined {
+  font-size: 1.5rem;
+  color: white;
+}
+
+
+/* Unlearn */
+.unlearn {
+  background-color: white;
+  padding: 2rem 8rem;
+}
+
+.unlearn h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.unlearn p {
+  font-size: 14px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #777;
+}
+
+.unlearn .unlearn-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.unlearn .card {
+  background-color: #fff;
+  width: 30%;
+  margin-bottom: 2rem;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.unlearn .card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.unlearn .card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  text-align: start;
+}
+
+.unlearn .card p {
+  font-size: 14px;
+  margin: 0;
+  text-align: start;
+  color: #777;
+}
+
+.unlearn .card a {
+  color: #96144a;
+  text-decoration: none;
+}
+
+.unlearn-cards-dates {
+  background-color: #f3eeee;
+  width: 35%;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-bottom: 1.2rem;
+}
+
+.unlearn-button {
+  background-color: #96144a;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+/* Footer */
+footer {
+  background-color: #96144a;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+ 
+@media screen and (max-width: 1024px) {
+  header {
+    padding: 1rem 4rem;
+  }
+
+  header nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  header nav ul li {
+    margin: 0.5rem 1rem;
+  }
+
+  .get-your-card-header,
+  .get-card-digital,
+  .everything-digital,
+  .credit-card-services,
+  .cards-for-you,
+  .mastering-credit-cards,
+  .unlearn {
+    padding: 2rem 4rem;
+    margin: 0 2rem;
+  }
+
+  .get-card-digital {
+    flex-direction: column;
+  }
+
+  .get-card-digital .content,
+  .get-card-digital .video {
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+
+  .everything-digital {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .everything-digital .content {
+    order: -1; /* Place content above image */
+    padding-left: 0;
+    padding-bottom: 2rem;
+  }
+
+  .everything-digital .image {
+    order: 1;
+  }
+
+  .everything-digital .feature-list {
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .video-kyc-process {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .video-kyc-process::before {
+    display: none;
+  }
+
+  .credit-card-services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mastering-credit-cards {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mastering-credit-cards .content {
+    padding-left: 0;
+  }
+
+  .mastering-credit-cards .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .unlearn .unlearn-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .unlearn .card {
+    width: 80%;
+  }
+
+  .credit-card-services.expanded .service-card {
+    width: calc(50% - 1rem); /* When expanded, show 2 cards per row */
+  }
+
+  .credit-card-services.expanded .hidden-card {
+    display: block; /* Show hidden cards when expanded */
+  }
+
+  /* View More Button for this range */
+  .view-more-container {
+    width: 100%;
+    text-align: center;
+  }
+
+  .view-more-btn {
+    padding: 0.5rem 1rem;
+    background-color: #96144a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .view-more-btn:hover {
+    background-color: #96144a;
+  }
+
+
+}
+
+/* Mobile View (up to 767px) */
+@media screen and (max-width: 767px) {
+  .everything-digital .video-kyc-process {
+    position: relative;
+  }
+
+  .everything-digital .video-kyc-process::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 16px;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    background-color: #ddd;
+    z-index: 0;
+  }
+
+  .everything-digital .video-kyc-step {
+    position: relative;
+    z-index: 1;
+  }
+
+  .everything-digital .video-kyc-step .step-number {
+    position: relative;
+    z-index: 2;
+  }
+}
+ /* Mobile View (up to 480px) */
+@media screen and (max-width: 480px) {
+  header {
+    padding: 0.5rem;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header nav ul li {
+    margin: 0.25rem 0;
+  }
+
+  .get-your-card-header,
+  .get-card-digital,
+  .everything-digital,
+  .credit-card-services,
+  .cards-for-you,
+  .mastering-credit-cards,
+  .unlearn {
+    padding: 0.5rem;
+    margin: 0;
+  }
+
+  .get-your-card-header .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .toggle-button {
+    margin-top: 0.5rem;
+  }
+
+  .get-card-digital iframe {
+    width: 100%;
+    height: auto;
+  }
+
+  .everything-digital .video-kyc-process {
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .everything-digital .video-kyc-process::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 16px;
+    transform: translateX(-50%);
+    width: calc(100% - 2rem);
+    height: 2px;
+    background-color: #ddd;
+    z-index: 0;
+  }
+
+  .everything-digital .video-kyc-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    width: auto;
+  }
+
+  .everything-digital .video-kyc-step .step-number {
+    background-color: #fff;
+    color: #666;
+    border: #96144a 1px solid;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .everything-digital .video-kyc-step:first-child .step-number {
+    background-color: #96144a;
+    color: #fff;
+  }
+
+  .service-card {
+    width: 100%; /* Full width on mobile */
+  }
+
+  .credit-card-services.expanded .service-card {
+    width: 100%; /* Ensure that all cards stack properly when expanded */
+  }
+
+  .hidden-card {
+    display: none; /* Ensure hidden cards remain hidden initially */
+  }
+
+  .credit-card-services.expanded .hidden-card {
+    display: block; /* Show hidden cards when expanded */
+  }
+  
+ 
+
+
+    .unlearn {
+      padding: 20px;
+    }
+  
+    .unlearn-cards {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      margin: 0 -20px;
+    }
+  
+    .unlearn-cards .card {
+      flex: 0 0 80%;
+      scroll-snap-align: start;
+      margin: 0 20px;
+    }
+  
+    .unlearn-cards .card img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .unlearn-cards-dates {
+      font-size: 12px;
+      margin-top: 10px;
+    }
+  
+    .unlearn-cards h3 {
+      font-size: 16px;
+      margin-top: 5px;
+    }
+  
+    .unlearn-cards p {
+      font-size: 14px;
+      margin-top: 5px;
+    }
+  
+    .unlearn-button {
+      margin-top: 20px;
+    }
+  
+    .dots {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+  
+    .dots .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #ccc;
+      margin: 0 4px;
+    }
+  
+    .dots .dot.active {
+      background-color: #333;
+    }
+
+
+   .credit-card-services {
+    grid-template-columns: 1fr;
+  }
+
+  .cards-for-you {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .cards-for-you .explore-btn {
+    margin-top: 1rem;
+  }
+
+  .mastering-credit-cards {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mastering-credit-cards .content {
+    order: -1;
+    padding-left: 0;
+    padding-bottom: 1rem;
+  }
+
+  .mastering-credit-cards .image {
+    order: 1;
+  }
+
+  .mastering-credit-cards .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .mastering-credit-cards .flex {
+    align-items: center;
+    text-align: center;
+  }
+
+  .unlearn .unlearn-cards {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .unlearn .card {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  /* Typography adjustments */
+  .get-your-card-header h1,
+  .get-card-digital h1,
+  .everything-digital h2,
+  .mastering-credit-cards h2,
+  .unlearn h2 {
+    font-size: 1.25rem;
+  }
+
+  .everything-digital .feature-label,
+  .unlearn .card p,
+  .mastering-credit-cards p {
+    font-size: 0.8rem;
+  }
+
+  /* Spacing and sizing reductions */
+  .get-card-digital ol li .number {
+    width: 24px;
+    height: 24px;
+    font-size: 1rem;
+  }
+}
+
